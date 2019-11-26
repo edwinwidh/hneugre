@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app/layout/App';
 import * as serviceWorker from './serviceWorker';
+import 'typeface-roboto'
 
 const rootEl = document.getElementById('root');
 
@@ -11,7 +12,7 @@ let render = () => {
 }
 
 if (module.hot) {
-    module.hot.accept('./app/layout/App.jsx', () => {
+    module.hot.accept('./app/layout/App', () => {
         setTimeout(render);
     })
 }
