@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  BottomNavigation,
-  BottomNavigationAction,
-} from '@material-ui/core';
+import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import {
   Restaurant,
   List,
@@ -10,20 +7,11 @@ import {
   AccountCircle
 } from '@material-ui/icons';
 import { Link, withRouter } from 'react-router-dom';
-import { classes } from 'istanbul-lib-coverage';
-
-const styles = {
-  stickToBottom: {
-    width: '100%',
-    position: 'fixed',
-    bottom: 0
-  }
-};
 
 class BottomNav extends Component {
   state = {
     value: 0,
-    pathMap: ['/merchant', '/pesanan']
+    pathMap: ['/merchant', '/pesanan', '/inbox', '/account']
   };
 
   componentWillReceiveProps(newProps) {
@@ -51,22 +39,32 @@ class BottomNav extends Component {
         value={value}
         onChange={this.handleChange}
         showLabels
-        className={classes.stickToBottom}
+        className={{ width: '100%', position: 'sticky', bottom: '0px' }}
       >
         <BottomNavigationAction
           label='Restoran'
           icon={<Restaurant />}
-          as={Link}
+          component={Link}
           to={pathMap[0]}
         />
         <BottomNavigationAction
           label='Pesanan'
           icon={<List />}
-          as={Link}
+          component={Link}
           to={pathMap[1]}
         />
-        <BottomNavigationAction label='Inbox' icon={<MailOutline />} />
-        <BottomNavigationAction label='Account' icon={<AccountCircle />} />
+        <BottomNavigationAction
+          label='Inbox'
+          icon={<MailOutline />}
+          component={Link}
+          to={pathMap[2]}
+        />
+        <BottomNavigationAction
+          label='Account'
+          icon={<AccountCircle />}
+          component={Link}
+          to={pathMap[3]}
+        />
       </BottomNavigation>
     );
   }

@@ -4,6 +4,8 @@ import BottomNav from '../../features/nav/BottomNav';
 import NavAppBar from '../../features/nav/NavAppBar';
 import { Route } from 'react-router-dom';
 import OrderDashboard from '../../features/order/OrderDashboard/OrderDashboard';
+import InboxDashboard from '../../features/inbox/InboxDashboard/InboxDashboard';
+import AccountDashboard from '../../features/account/AccountDashboard/AccountDashboard';
 
 class App extends Component {
   render() {
@@ -11,9 +13,11 @@ class App extends Component {
       <Fragment>
         <NavAppBar />
           <div className='app'>
+            <Route exact path='/' component={MerchantDashboard} />
             <Route path='/merchant' component={MerchantDashboard} />
             <Route path='/pesanan' component={OrderDashboard} />
-            <MerchantDashboard />
+            <Route path='/inbox' component={InboxDashboard} />
+            <Route path='/account' component={AccountDashboard} />
             <BottomNav />
           </div>
       </Fragment>
