@@ -1,5 +1,9 @@
-import React, { Component } from 'react';
-import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
+import React, { Component, Fragment } from 'react';
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  CssBaseline
+} from '@material-ui/core';
 import {
   Restaurant,
   List,
@@ -7,6 +11,22 @@ import {
   AccountCircle
 } from '@material-ui/icons';
 import { Link, withRouter } from 'react-router-dom';
+import { withStyles } from '@material-ui/styles';
+
+const styles = theme => ({
+  root: {
+    color: 'grey',
+    '&$selected': {
+      color: 'red'
+    }
+  },
+  selected: {},
+  stickToBottom: {
+    width: '100%',
+    position: 'fixed',
+    bottom: 0
+  }
+});
 
 class BottomNav extends Component {
   state = {
@@ -33,41 +53,48 @@ class BottomNav extends Component {
 
   render() {
     const { value, pathMap } = this.state;
-
+    const actionClasses = this.props.classes;
     return (
-      <BottomNavigation
-        value={value}
-        onChange={this.handleChange}
-        showLabels
-        className={{ width: '100%', position: 'sticky', bottom: '0px' }}
-      >
-        <BottomNavigationAction
-          label='Restoran'
-          icon={<Restaurant />}
-          component={Link}
-          to={pathMap[0]}
-        />
-        <BottomNavigationAction
-          label='Pesanan'
-          icon={<List />}
-          component={Link}
-          to={pathMap[1]}
-        />
-        <BottomNavigationAction
-          label='Inbox'
-          icon={<MailOutline />}
-          component={Link}
-          to={pathMap[2]}
-        />
-        <BottomNavigationAction
-          label='Account'
-          icon={<AccountCircle />}
-          component={Link}
-          to={pathMap[3]}
-        />
-      </BottomNavigation>
+      <Fragment>
+        <CssBaseline />
+        <BottomNavigation
+          value={value}
+          onChange={this.handleChange}
+          showLabels
+          className={actionClasses.stickToBottom}
+        >
+          <BottomNavigationAction
+            label='Restoran'
+            icon={<Restaurant />}
+            component={Link}
+            to={pathMap[0]}
+            classes={actionClasses}
+          />
+          <BottomNavigationAction
+            label='Pesanan'
+            icon={<List />}
+            component={Link}
+            to={pathMap[1]}
+            classes={actionClasses}
+          />
+          <BottomNavigationAction
+            label='Inbox'
+            icon={<MailOutline />}
+            component={Link}
+            to={pathMap[2]}
+            classes={actionClasses}
+          />
+          <BottomNavigationAction
+            label='Account'
+            icon={<AccountCircle />}
+            component={Link}
+            to={pathMap[3]}
+            classes={actionClasses}
+          />
+        </BottomNavigation>
+      </Fragment>
     );
   }
 }
 
-export default withRouter(BottomNav);
+export default withRouter(withStyles(styles)(BottomNav));
