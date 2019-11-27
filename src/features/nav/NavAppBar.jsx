@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
 
-class MerchantAppBar extends Component {
+class NavAppBar extends Component {
     render() {
         return (
             <AppBar position='sticky' color='inherit'>
@@ -15,4 +15,4 @@ class MerchantAppBar extends Component {
     }
 }
 
-export default MerchantAppBar;
+export default NavAppBar;

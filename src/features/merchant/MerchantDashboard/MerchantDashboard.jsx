@@ -1,40 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import MerchantAppBar from '../MerchantNav/MerchantAppBar';
-import MerchantBottomNav from '../MerchantNav/MerchantBottomNav';
+import MerchantList from '../MerchantList/MerchantList';
 
 class MerchantDashboard extends Component {
   render() {
     return (
       <Fragment>
-        <MerchantAppBar />
-        <div>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-            <h1>HUNGREE</h1>
-        </div>
-        <MerchantBottomNav />
+        <MerchantList />
       </Fragment>
     );
   }
