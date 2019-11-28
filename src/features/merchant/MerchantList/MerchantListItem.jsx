@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import { Box } from '@material-ui/core'
 
 class MerchantListItem extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+            <Box border={1} borderRadius={20} component='h1'>
+                Testing
+            </Box>
         )
     }
 }
