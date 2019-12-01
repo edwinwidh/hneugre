@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
 
-class NavAppBar extends Component {
+class OrderNavbar extends Component {
     render() {
         return (
             <AppBar position='sticky' color='inherit'>
                 <Toolbar>
                     <Typography variant='h6' color='error'>
-                        Restaurants
+                        Pesanan
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -15,4 +15,4 @@ class NavAppBar extends Component {
     }
 }
 
-export default NavAppBar;
+export default OrderNavbar;

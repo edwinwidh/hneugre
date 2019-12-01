@@ -1,12 +1,16 @@
-import React, { Component } from 'react'
-import AccountList from '../AccountList/AccountList'
+import React, { Component, Fragment } from 'react';
+import AccountList from '../AccountList/AccountList';
+import AccountNavbar from '../AccountNavbar';
 
 class AccountDashboard extends Component {
-    render() {
-        return (
-            <AccountList />
-        )
-    }
+  render() {
+    return (
+      <Fragment>
+        <AccountNavbar />
+        <AccountList />
+      </Fragment>
+    );
+  }
 }
 
-export default AccountDashboard
+export default AccountDashboard;

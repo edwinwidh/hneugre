@@ -1,12 +1,16 @@
-import React, { Component } from 'react'
-import InboxList from '../InboxList/InboxList'
+import React, { Component, Fragment } from 'react';
+import InboxList from '../InboxList/InboxList';
+import InboxNavbar from '../InboxNavbar';
 
 class InboxDashboard extends Component {
-    render() {
-        return (
-            <InboxList />
-        )
-    }
+  render() {
+    return (
+      <Fragment>
+        <InboxNavbar />
+        <InboxList />
+      </Fragment>
+    );
+  }
 }
 
 export default InboxDashboard;

@@ -6,7 +6,6 @@ import {
   Card,
   CardActionArea,
   CardMedia,
-  CardContent,
   Typography
 } from '@material-ui/core';
 import MerchantListItem from './MerchantListItem';
@@ -32,21 +31,22 @@ class MerchantList extends Component {
             }}
           />
         </form>
+        <br />
         <Card>
           <CardActionArea>
             <CardMedia
               component='img'
               height='140'
-              image='../../../../public/assets/iklan.png'
+              image='/assets/iklan.png'
               title='iklan'
             />
-            <CardContent>
-              <Typography>
-                IKLAN
-              </Typography>
-            </CardContent>
           </CardActionArea>
         </Card>
+        <br />
+        <Typography variant='h5'>
+          Near By
+        </Typography>
+        <br />
         <MerchantListItem />
       </Container>
     );
