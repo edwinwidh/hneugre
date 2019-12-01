@@ -1,7 +1,8 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import YoshinoyaList from './YoshinoyaList';
 import YoshinoyaNavbar from './YoshinoyaNavbar';
+import { Container } from '@material-ui/core';
 
 const mapState = state => ({
   yoshitems: state.yoshitems
@@ -9,12 +10,12 @@ const mapState = state => ({
 
 class YoshinoyaDashboard extends Component {
   render() {
-      const {yoshitems} = this.props;
+    const { yoshitems } = this.props;
     return (
-      <Fragment>
+      <Container>
         <YoshinoyaNavbar />
         <YoshinoyaList yoshitems={yoshitems} />
-      </Fragment>
+      </Container>
     );
   }
 }
