@@ -4,8 +4,8 @@ import { Grid, Typography } from '@material-ui/core';
 const YoshinoyaItemDesc = ({ yoshitem }) => {
   return (
     <Fragment>
-      <Grid container xs={12} justify='center'>
-        <Grid item xs={12}>
+      <Grid container xs={12}>
+        <Grid container xs={12} justify='center'>
           <img alt={yoshitem.name} src={yoshitem.photo} />
         </Grid>
         <Grid item xs={12}>
