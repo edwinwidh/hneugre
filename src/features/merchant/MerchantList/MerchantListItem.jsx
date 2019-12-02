@@ -13,7 +13,7 @@ class MerchantListItem extends Component {
                 component='img'
                 height='140'
                 image='/assets/yoshi.png'
-                title='iklan'
+                title='yoshinoya'
                 object-fit
               />
             </CardActionArea>
@@ -27,7 +27,7 @@ class MerchantListItem extends Component {
               component='img'
               height='140'
               image='/assets/blue.png'
-              title='iklan'
+              title='bluelane'
             />
           </CardActionArea>
         </Card>
@@ -40,7 +40,7 @@ class MerchantListItem extends Component {
               component='img'
               height='140'
               image='/assets/adora.png'
-              title='iklan'
+              title='adora'
             />
           </CardActionArea>
         </Card>

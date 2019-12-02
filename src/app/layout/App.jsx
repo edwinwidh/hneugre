@@ -7,6 +7,7 @@ import InboxDashboard from '../../features/inbox/InboxDashboard/InboxDashboard';
 import AccountDashboard from '../../features/account/AccountDashboard/AccountDashboard';
 import YoshinoyaDashboard from '../../features/menu/yoshinoya/YoshinoyaDashboard';
 import YoshinoyaItemPage from '../../features/menu/yoshinoya/YoshinoyaItemPage/YoshinoyaItemPage';
+import Cart from '../../features/cart/Cart';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path='/yoshinoya/:id' component={YoshinoyaItemPage} />
           <Route path='/bluelane' component={YoshinoyaDashboard} />
           <Route path='/adora' component={YoshinoyaDashboard} />
+          <Route path='/cart' component={Cart} />
           <BottomNav />
         </div>
       </Fragment>
