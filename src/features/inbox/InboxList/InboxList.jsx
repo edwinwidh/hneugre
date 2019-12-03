@@ -1,11 +1,148 @@
-import React, { Component } from 'react'
+import React, { Fragment } from 'react';
+import {
+  Grid,
+  ButtonBase,
+  Typography,
+  Paper,
+  makeStyles
+} from '@material-ui/core';
 
-class InboxList extends Component {
-    render() {
-        return (
-            <h1>Inbox Page</h1>
-        )
-    }
-}
+const useStyles = makeStyles(theme => ({
+  root: {
+    padding: theme.spacing(2, 2),
+    background: '#e0e0e0',
+    margin: theme.spacing(2, 2)
+  }
+}));
 
-export default InboxList
+const InboxList = () => {
+  const classes = useStyles();
+  return (
+    <Fragment>
+      <Grid container>
+        <Grid container xs={6} justify='center'>
+          <ButtonBase>
+            <Typography align='center' color='error' variant='h6'>
+              Promo
+            </Typography>
+          </ButtonBase>
+        </Grid>
+
+        <Grid container xs={6} justify='center'>
+          <ButtonBase>
+            <Typography align='center' color='textSecondary' variant='h6'>
+              Pesan
+            </Typography>
+          </ButtonBase>
+        </Grid>
+      </Grid>
+
+      <Paper className={classes.root}>
+        <Grid container>
+          <Grid item>
+            <img
+              style={{ width: '100px' }}
+              alt='blue'
+              src='/assets/logo/bluelogo.png'
+            />
+          </Grid>
+          <Grid item xs={1}></Grid>
+          <Grid item xs sm container alignContent='flex-start'>
+            <Grid item xs>
+              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Buy 1 Get 1
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Paper>
+
+      <Paper className={classes.root}>
+        <Grid container>
+          <Grid item>
+            <img
+              style={{ width: '100px' }}
+              alt='blue'
+              src='/assets/logo/yoshilogo.png'
+            />
+          </Grid>
+          <Grid item xs={1}></Grid>
+          <Grid item xs sm container alignContent='flex-start'>
+            <Grid item xs>
+              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Buy 1 Get 1
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Paper>
+
+      <Paper className={classes.root}>
+        <Grid container>
+          <Grid item>
+            <img
+              style={{ width: '100px' }}
+              alt='blue'
+              src='/assets/logo/adoralogo.png'
+            />
+          </Grid>
+          <Grid item xs={1}></Grid>
+          <Grid item xs sm container alignContent='flex-start'>
+            <Grid item xs>
+              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Buy 1 Get 1
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Paper>
+
+      <Paper className={classes.root}>
+        <Grid container>
+          <Grid item>
+            <img
+              style={{ width: '100px' }}
+              alt='blue'
+              src='/assets/logo/adoralogo.png'
+            />
+          </Grid>
+          <Grid item xs={1}></Grid>
+          <Grid item xs sm container alignContent='flex-start'>
+            <Grid item xs>
+              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Buy 1 Get 1
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Paper>
+
+      <Paper className={classes.root}>
+        <Grid container>
+          <Grid item>
+            <img
+              style={{ width: '100px' }}
+              alt='blue'
+              src='/assets/logo/yoshilogo.png'
+            />
+          </Grid>
+          <Grid item xs={1}></Grid>
+          <Grid item xs sm container alignContent='flex-start'>
+            <Grid item xs>
+              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Buy 1 Get 1
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Paper>
+    </Fragment>
+  );
+};
+
+export default InboxList;
