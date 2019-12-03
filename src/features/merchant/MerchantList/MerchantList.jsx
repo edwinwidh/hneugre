@@ -3,10 +3,8 @@ import {
   Container,
   TextField,
   InputAdornment,
-  Card,
-  CardActionArea,
-  CardMedia,
-  Typography
+  Typography,
+  Grid
 } from '@material-ui/core';
 import MerchantListItem from './MerchantListItem';
 import { Search } from '@material-ui/icons';
@@ -32,16 +30,9 @@ class MerchantList extends Component {
           />
         </form>
         <br />
-        <Card>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              height='140'
-              image='/assets/iklan.png'
-              title='iklan'
-            />
-          </CardActionArea>
-        </Card>
+        <Grid container xs justify='center'>
+          <img style={{width: '100%'}} alt='iklan' src='/assets/iklan.png' />
+        </Grid>
         <br />
         <Typography variant='h5'>
           Near By

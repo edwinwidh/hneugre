@@ -23,7 +23,7 @@ class YoshinoyaDashboard extends Component {
         <Grid container>
           <Grid container xs={6} justify='center'>
             <ButtonBase>
-              <Typography align='center' color='textSecondary' variant='h6'>
+              <Typography align='center' color='error' variant='h6'>
                 Makan Meja
               </Typography>
             </ButtonBase>
@@ -31,7 +31,7 @@ class YoshinoyaDashboard extends Component {
 
           <Grid container xs={6} justify='center'>
             <ButtonBase>
-              <Typography align='center' color='error' variant='h6'>
+              <Typography align='center' color='textSecondary' variant='h6'>
                 Bungkus
               </Typography>
             </ButtonBase>

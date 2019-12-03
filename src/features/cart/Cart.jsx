@@ -6,7 +6,8 @@ import { removeItem } from './cartActions';
 
 const mapState = (state, ownProps) => {
   return {
-    cart: state.cart
+    cart: state.cart,
+    yoshitems: state.yoshitems
   };
 };
 

@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Card, CardActionArea, CardMedia } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 class MerchantListItem extends Component {
@@ -7,43 +7,21 @@ class MerchantListItem extends Component {
     return (
       <Fragment>
         <Link to='/yoshinoya'>
-          <Card>
-            <CardActionArea>
-              <CardMedia
-                component='img'
-                height='140'
-                image='/assets/yoshi.png'
-                title='yoshinoya'
-                object-fit
-              />
-            </CardActionArea>
-          </Card>
+        <Grid container xs justify='center'>
+          <img style={{width: '100%'}} alt='iklan' src='/assets/yoshi.png' />
+        </Grid>
         </Link>
         <br />
         <Link to='/bluelane'>
-        <Card>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              height='140'
-              image='/assets/blue.png'
-              title='bluelane'
-            />
-          </CardActionArea>
-        </Card>
+        <Grid container xs justify='center'>
+          <img style={{width: '100%'}} alt='iklan' src='/assets/blue.png' />
+        </Grid>
         </Link>
         <br />
         <Link to='/adora'>
-        <Card>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              height='140'
-              image='/assets/adora.png'
-              title='adora'
-            />
-          </CardActionArea>
-        </Card>
+        <Grid container xs justify='center'>
+          <img style={{width: '100%'}} alt='iklan' src='/assets/adora.png' />
+        </Grid>
         </Link>
         <br />
         <br />
