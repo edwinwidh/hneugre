@@ -49,5 +49,6 @@ export default {
       price: 33000,
       photo: '/assets/yoshinoya/toridon-red-hot-chilli.png'
     }
-  ]
+  ],
+  total: 0
 };

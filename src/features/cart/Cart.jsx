@@ -4,7 +4,7 @@ import { Container } from '@material-ui/core';
 import CartAppbar from './CartAppbar';
 import { removeItem } from './cartActions';
 
-const mapState = (state, props) => {
+const mapState = (state, ownProps) => {
   return {
     cart: state.cart
   };
@@ -12,26 +12,35 @@ const mapState = (state, props) => {
 
 const actions = dispatch => {
   return {
-    removeFromCart: item => dispatch(removeItem(item))
+    removeItem: id => {dispatch(removeItem(id))}
   };
 };
 
 class Cart extends Component {
+
+    handleRemove = (id) => {
+        this.props.removeItem(id)
+    }
+
   render() {
-    const cartList = this.props.cart.map((item, index) => {
-      return (
-        <div key={index}>
-          <p style={{ color: '#767676' }}>
-            {item.name} - {item.price}{' '}
-          </p>
-        </div>
-      );
-    });
+
+    let cart = this.props.yoshitems.length ? 
+    (
+        this.props.yoshitems.map(item=>{
+            return(
+                <p>{item.name}</p>
+            )
+        })
+    ) : 
+
+    (
+        <p>Nothing</p>
+    )
 
     return (
       <Container>
         <CartAppbar />
-        {cartList}
+        {cart}
       </Container>
     );
   }

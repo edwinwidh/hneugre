@@ -37,7 +37,7 @@ const mapState = (state, ownProps) => {
 
 const actions = dispatch => {
   return {
-    addToCart: item => dispatch(addToCart(item))
+    addToCart: item => {dispatch(addToCart(item))}
   };
 };
 
@@ -59,7 +59,9 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
 
   const { miso, eggroll, redchilli } = state;
 
-
+  const handleClick = (id) => {
+      this.props.addToCart(id);
+  }
 
   return (
     <Container>
@@ -156,7 +158,7 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
         variant='contained'
         color='secondary'
         size='large'
-        onClick= {() => addToCart(yoshitem)}
+        onClick= {() => {handleClick(yoshitem.id)}}
       >
         {`Add: Rp.${yoshitem.price}`}
       </Button>

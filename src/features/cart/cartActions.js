@@ -5,30 +5,30 @@ import {
   REMOVE_ITEM
 } from './cartConstants';
 
-export const addToCart = item => {
+export const addToCart = id => {
   return {
     type: ADD_TO_CART,
-    item: item
+    id
   };
 };
 
-export const removeItem = item => {
+export const removeItem = id => {
   return {
     type: REMOVE_ITEM,
-    item: item
+    id
   };
 };
 
-export const addQuantity = item => {
+export const addQuantity = id => {
   return {
     type: ADD_QUANTITY,
-    item: item
+    id
   };
 };
 
-export const subQuantity = item => {
+export const subQuantity = id => {
   return {
     type: SUB_QUANTITY,
-    item: item
+    id
   };
 };
