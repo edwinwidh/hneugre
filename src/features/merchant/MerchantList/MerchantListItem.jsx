@@ -8,13 +8,13 @@ class MerchantListItem extends Component {
       <Fragment>
         <Link to='/yoshinoya'>
         <Grid container xs justify='center'>
-          <img style={{width: '100%'}} alt='iklan' src='/assets/yoshi.png' />
+          <img style={{width: '100%'}} alt='iklan' src='/assets/blue.png' />
         </Grid>
         </Link>
         <br />
         <Link to='/bluelane'>
         <Grid container xs justify='center'>
-          <img style={{width: '100%'}} alt='iklan' src='/assets/blue.png' />
+          <img style={{width: '100%'}} alt='iklan' src='/assets/yoshi.png' />
         </Grid>
         </Link>
         <br />

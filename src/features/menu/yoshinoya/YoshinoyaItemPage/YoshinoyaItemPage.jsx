@@ -37,8 +37,8 @@ const mapState = (state, ownProps) => {
 
 const actions = dispatch => {
   return {
-    addToCart: item => {
-      dispatch(addToCart(item));
+    addToCart: id => {
+      dispatch(addToCart(id));
     }
   };
 };
@@ -160,7 +160,7 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
           variant="contained"
           color="secondary"
           size="large"
-          onClick={() => handleClick(yoshitem.id)}
+          onClick={() => {handleClick(yoshitem.id)}}
         >
           {`Add: Rp.${yoshitem.price}`}
         </Button>

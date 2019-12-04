@@ -13,30 +13,29 @@ const mapState = (state, ownProps) => {
 
 const actions = dispatch => {
   return {
-    removeItem: id => {dispatch(removeItem(id))}
+    removeItem: id => {
+      dispatch(removeItem(id));
+    }
   };
 };
 
 class Cart extends Component {
-
-    handleRemove = (id) => {
-        this.props.removeItem(id)
-    }
+  handleRemove = id => {
+    this.props.removeItem(id);
+  };
 
   render() {
-
-    let cart = this.props.yoshitems.length ? 
-    (
-        this.props.yoshitems.map(item=>{
-            return(
-                <p>{item.name}</p>
-            )
-        })
-    ) : 
-
-    (
-        <p>Nothing</p>
-    )
+    let cart = this.props.yoshitems.length ? (
+      this.props.yoshitems.map(item => {
+        return (
+          <li key={item.id}>
+            <p>{item.name}</p>
+          </li>
+        );
+      })
+    ) : (
+      <p>Nothing</p>
+    );
 
     return (
       <Container>
