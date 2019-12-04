@@ -10,7 +10,7 @@ import {
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(2, 2),
-    background: '#e0e0e0',
+    background: '#eeeeee',
     margin: theme.spacing(2, 2)
   }
 }));
@@ -41,7 +41,7 @@ const InboxList = () => {
         <Grid container>
           <Grid item>
             <img
-              style={{ width: '100px' }}
+              style={{ width: '90px' }}
               alt='blue'
               src='/assets/logo/bluelogo.png'
             />
@@ -62,7 +62,7 @@ const InboxList = () => {
         <Grid container>
           <Grid item>
             <img
-              style={{ width: '100px' }}
+              style={{ width: '90px' }}
               alt='blue'
               src='/assets/logo/yoshilogo.png'
             />
@@ -70,9 +70,9 @@ const InboxList = () => {
           <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='h6'>Yoshinoya Buy 1 Get 1</Typography>
               <Typography variant='body1' color='textSecondary'>
-                Buy 1 Get 1
+                Yakiniku Beef Bowl
               </Typography>
             </Grid>
           </Grid>
@@ -83,7 +83,7 @@ const InboxList = () => {
         <Grid container>
           <Grid item>
             <img
-              style={{ width: '100px' }}
+              style={{ width: '90px' }}
               alt='blue'
               src='/assets/logo/adoralogo.png'
             />
@@ -91,9 +91,9 @@ const InboxList = () => {
           <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='h6'>Adoralezat 10% OFF</Typography>
               <Typography variant='body1' color='textSecondary'>
-                Buy 1 Get 1
+                Bakmi Original S
               </Typography>
             </Grid>
           </Grid>
@@ -104,7 +104,7 @@ const InboxList = () => {
         <Grid container>
           <Grid item>
             <img
-              style={{ width: '100px' }}
+              style={{ width: '90px' }}
               alt='blue'
               src='/assets/logo/adoralogo.png'
             />
@@ -112,9 +112,9 @@ const InboxList = () => {
           <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='h6'>Adoralezat 25rb Voucher</Typography>
               <Typography variant='body1' color='textSecondary'>
-                Buy 1 Get 1
+                Min. Pembelian 75rb
               </Typography>
             </Grid>
           </Grid>
@@ -125,7 +125,7 @@ const InboxList = () => {
         <Grid container>
           <Grid item>
             <img
-              style={{ width: '100px' }}
+              style={{ width: '90px' }}
               alt='blue'
               src='/assets/logo/yoshilogo.png'
             />
@@ -133,9 +133,9 @@ const InboxList = () => {
           <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Blue Lane Coffee</Typography>
+              <Typography variant='h6'>Yoshinoya Buy 1 Get 1</Typography>
               <Typography variant='body1' color='textSecondary'>
-                Buy 1 Get 1
+                Miso Soup
               </Typography>
             </Grid>
           </Grid>
