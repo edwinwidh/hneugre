@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addToCart } from '../../../cart/cartActions';
 import { Button } from '@material-ui/core';

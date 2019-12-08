@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 import CartAppbar from './CartAppbar';
 import { removeItem } from './cartActions';
 import { Link } from 'react-router-dom';
 
-const mapState = (state, ownProps) => {
+const mapState = (state, props) => {
   return {
-    cart: state.cart,
+    cartList: state.cart
   };
 };
 
@@ -25,8 +25,8 @@ class Cart extends Component {
   };
 
   render() {
-    let cart = this.props.cart.length ? (
-      this.props.cart.map(item => {
+    let cart = this.props.cartList.cart.length ? (
+      this.props.cartList.cart.map(item => {
         return (
           <li key={item.id}>
             <div className='item-img'>
@@ -58,6 +58,12 @@ class Cart extends Component {
       <Container>
         <CartAppbar />
         {cart}
+        <Grid container xs={12}>
+          <Typography>Total: {this.props.cartList.total}</Typography>
+        </Grid>
+        <br />
+        <br />
+        <br />
       </Container>
     );
   }
