@@ -14,10 +14,7 @@ import {
   FormGroup,
   Checkbox,
   TextField,
-  Button
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import { addToCart } from "../../../cart/cartActions";
 import YoshiButton from "./YoshiButton";
 
 const mapState = (state, ownProps) => {
