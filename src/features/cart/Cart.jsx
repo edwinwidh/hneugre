@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { Container } from '@material-ui/core';
 import CartAppbar from './CartAppbar';
 import { removeItem } from './cartActions';
+import { Link } from 'react-router-dom';
 
 const mapState = (state, ownProps) => {
   return {
     cart: state.cart,
-    yoshitems: state.yoshitems
   };
 };
 
@@ -25,11 +25,28 @@ class Cart extends Component {
   };
 
   render() {
-    let cart = this.props.yoshitems.length ? (
-      this.props.yoshitems.map(item => {
+    let cart = this.props.cart.length ? (
+      this.props.cart.map(item => {
         return (
           <li key={item.id}>
-            <p>{item.name}</p>
+            <div className='item-img'>
+              <img src={item.photo} alt={item.photo} className='' />
+            </div>
+
+            <div className='item-desc'>
+              <span className='title'>{item.name}</span>
+              <p>
+                <b>Price: {item.price}$</b>
+              </p>
+              <button
+                className='waves-effect waves-light btn pink remove'
+                onClick={() => {
+                  this.handleRemove(item.id);
+                }}
+              >
+                Remove
+              </button>
+            </div>
           </li>
         );
       })

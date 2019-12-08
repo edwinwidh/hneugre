@@ -18,6 +18,7 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../../cart/cartActions";
+import YoshiButton from "./YoshiButton";
 
 const mapState = (state, ownProps) => {
   const yoshitemId = ownProps.match.params.id;
@@ -32,14 +33,6 @@ const mapState = (state, ownProps) => {
 
   return {
     yoshitem
-  };
-};
-
-const actions = dispatch => {
-  return {
-    addToCart: id => {
-      dispatch(addToCart(id));
-    }
   };
 };
 
@@ -60,10 +53,6 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
   };
 
   const { miso, eggroll, redchilli } = state;
-
-  const handleClick = id => {
-    this.props.addToCart(id);
-  };
 
   return (
     <Container>
@@ -154,16 +143,7 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
         </form>
       </Grid>
       <Grid container xs={12} justify="center">
-        <Button
-          component={Link}
-          to={`/cart`}
-          variant="contained"
-          color="secondary"
-          size="large"
-          onClick={() => {handleClick(yoshitem.id)}}
-        >
-          {`Add: Rp.${yoshitem.price}`}
-        </Button>
+        <YoshiButton key={yoshitem.id} yoshitem={yoshitem} />
       </Grid>
       <br />
       <br />
@@ -172,4 +152,4 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
   );
 };
 
-export default connect(mapState, actions)(YoshinoyaItemPage);
+export default connect(mapState)(YoshinoyaItemPage);
