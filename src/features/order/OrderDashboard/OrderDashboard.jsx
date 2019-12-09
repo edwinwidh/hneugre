@@ -6,7 +6,7 @@ import { Container } from '@material-ui/core';
 class OrderDashboard extends Component {
   render() {
     return (
-      <Container>
+      <Container maxWidth='xs'>
         <OrderNavbar />
         <OrderList />
       </Container>

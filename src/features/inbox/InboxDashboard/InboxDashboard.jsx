@@ -6,7 +6,7 @@ import { Container } from '@material-ui/core';
 class InboxDashboard extends Component {
   render() {
     return (
-      <Container>
+      <Container maxWidth='xs'>
         <InboxNavbar />
         <InboxList />
       </Container>

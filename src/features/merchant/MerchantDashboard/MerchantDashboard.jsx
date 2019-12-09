@@ -6,7 +6,7 @@ import { Container } from '@material-ui/core';
 class MerchantDashboard extends Component {
   render() {
     return (
-      <Container>
+      <Container maxWidth='xs'>
         <MerchantNavbar />
         <MerchantList />
       </Container>

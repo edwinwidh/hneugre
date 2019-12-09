@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   },
   rot: {
     padding: theme.spacing(1, 2),
-    background: '#f44336',
+    background: '#000000',
     margin: theme.spacing(1)
   }
 }));
@@ -30,7 +30,7 @@ const AccountList = () => {
         </Grid>
 
         <Grid container xs={6} justify='flex-end'>
-          <Link to='/yoshinoya' style={{ textDecoration: 'none' }}>
+          <Link to='/cart' style={{ textDecoration: 'none' }}>
             <Typography
               variant='body1'
               style={{ padding: '10px', fontSize: '20px' }}
@@ -79,38 +79,6 @@ const AccountList = () => {
             </Grid>
           </Grid>
         </Paper>
-      </Grid>
-
-      <Grid>
-        <Grid item xs={8}>
-          <Typography
-            variant='body1'
-            style={{ padding: '10px', fontSize: '20px' }}
-          >
-            Metode Pembayaran
-          </Typography>
-        </Grid>
-        <Grid>
-          <Paper className={classes.root}>
-            <Grid container>
-              <Typography variant='body2' style={{ fontWeight: 'bold' }}>
-                OVO +628123456789
-              </Typography>
-            </Grid>
-          </Paper>
-        </Grid>
-        <Grid>
-          <Paper className={classes.rot}>
-            <Grid container justify='center'>
-              <Typography
-                variant='body2'
-                style={{ fontWeight: 'bold', color: 'white' }}
-              >
-                + Tambahkan Metode Pembayaran
-              </Typography>
-            </Grid>
-          </Paper>
-        </Grid>
       </Grid>
 
       <Grid>
@@ -202,7 +170,7 @@ const AccountList = () => {
               variant='body2'
               style={{ fontWeight: 'bold', color: 'white' }}
             >
-              + Tambahkan Metode Pembayaran
+              Keluar
             </Typography>
           </Grid>
         </Paper>

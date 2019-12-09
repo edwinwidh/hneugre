@@ -6,7 +6,7 @@ import { Container } from '@material-ui/core';
 class AccountDashboard extends Component {
   render() {
     return (
-      <Container>
+      <Container maxWidth='xs'>
         <AccountNavbar />
         <AccountList />
       </Container>

@@ -18,7 +18,7 @@ class YoshinoyaDashboard extends Component {
   render() {
     const { yoshitems } = this.props;
     return (
-      <Container>
+      <Container maxWidth='xs'>
         <YoshinoyaNavbar />
         <Grid container>
           <Grid container xs={6} justify='center'>

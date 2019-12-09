@@ -6,13 +6,13 @@ class MerchantListItem extends Component {
   render() {
     return (
       <Fragment>
-        <Link to='/yoshinoya'>
+        <Link to='/bluelane'>
         <Grid container xs justify='center'>
           <img style={{width: '100%'}} alt='iklan' src='/assets/blue.png' />
         </Grid>
         </Link>
         <br />
-        <Link to='/bluelane'>
+        <Link to='/yoshinoya'>
         <Grid container xs justify='center'>
           <img style={{width: '100%'}} alt='iklan' src='/assets/yoshi.png' />
         </Grid>

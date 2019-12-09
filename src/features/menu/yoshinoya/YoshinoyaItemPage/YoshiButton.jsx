@@ -26,19 +26,19 @@ class YoshiButton extends Component {
   render() {
     const { yoshitem } = this.props;
     return (
-        <Button
-          component={Link}
-          to={`/cart`}
-          variant='contained'
-          color='secondary'
-          size='large'
-          onClick={() => {
-            this.handleClick(yoshitem.id);
-          }}
-        >
-          {`Add: Rp.${yoshitem.price}`}
-        </Button>
-    )
+      <Button
+        component={Link}
+        to={`/yoshinoya`}
+        variant='contained'
+        color='secondary'
+        size='large'
+        onClick={() => {
+          this.handleClick(yoshitem.id);
+        }}
+      >
+        {`Add: Rp.${yoshitem.price}`}
+      </Button>
+    );
   }
 }
 
