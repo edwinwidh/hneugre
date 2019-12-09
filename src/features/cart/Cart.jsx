@@ -7,7 +7,8 @@ import {
   Box,
   Divider,
   TextField,
-  IconButton
+  IconButton,
+  Button
 } from '@material-ui/core';
 import CartAppbar from './CartAppbar';
 import { removeItem, subQuantity, addQuantity } from './cartActions';
@@ -166,6 +167,18 @@ class Cart extends Component {
               </div>
             </form>
           </Grid>
+        </Grid>
+        <Grid container xs justify='center'>
+          <Button
+            component={Link}
+            to={`/yoshinoya`}
+            variant='contained'
+            color='secondary'
+            size='large'
+            style={{bottom: '70px', top: 'auto', position: 'fixed'}}
+          >
+            Pesan dan Bayar
+          </Button>
         </Grid>
         <br />
         <br />
