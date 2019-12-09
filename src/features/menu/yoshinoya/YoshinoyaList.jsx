@@ -19,7 +19,7 @@ class YoshinoyaList extends Component {
           <YoshinoyaListItem key={yoshitem.id} yoshitem={yoshitem} />
         ))}
         <Grid container xs>
-          {this.props.cartList.cart.length && 
+          {this.props.cartList.cart.length &&
           <YoshiCartAccess cartList={cartList} />}
         </Grid>
         <br />

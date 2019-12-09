@@ -1,5 +1,10 @@
 import initialState from '../menu/initialState';
-import { ADD_TO_CART, REMOVE_ITEM } from './cartConstants';
+import {
+  ADD_TO_CART,
+  REMOVE_ITEM,
+  ADD_QUANTITY,
+  SUB_QUANTITY
+} from './cartConstants';
 
 const cartReducer = (state = initialState, action) => {
   if (action.type === ADD_TO_CART) {
@@ -9,7 +14,8 @@ const cartReducer = (state = initialState, action) => {
       addedItem.quantity += 1;
       return {
         ...state,
-        total: state.total + addedItem.price
+        total: state.total + addedItem.price,
+        cartQuantity: state.cartQuantity + 1
       };
     } else {
       addedItem.quantity = 1;
@@ -19,7 +25,8 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         cart: [...state.cart, addedItem],
-        total: newTotal
+        total: newTotal,
+        cartQuantity: state.cartQuantity + 1
       };
     }
   }
@@ -29,12 +36,47 @@ const cartReducer = (state = initialState, action) => {
     let newItems = state.cart.filter(item => action.id !== item.id);
 
     let newTotal = state.total - itemToRemove.price * itemToRemove.quantity;
+    let newCartQuantity = state.cartQuantity - itemToRemove.quantity;
     console.log(itemToRemove);
     return {
       ...state,
       cart: newItems,
-      total: newTotal
+      total: newTotal,
+      cartQuantity: newCartQuantity
     };
+  }
+
+  if (action.type === ADD_QUANTITY) {
+    let addedItem = state.yoshitems.find(item => item.id === action.id);
+    addedItem.quantity += 1;
+    let newTotal = state.total + addedItem.price;
+    return {
+      ...state,
+      total: newTotal,
+      cartQuantity: state.cartQuantity + 1
+    };
+  }
+
+  if (action.type === SUB_QUANTITY) {
+    let addedItem = state.yoshitems.find(item => item.id === action.id);
+    if (addedItem.quantity === 1) {
+      let newItems = state.cart.filter(item => item.id !== action.id);
+      let newTotal = state.total - addedItem.price;
+      return {
+        ...state,
+        cart: newItems,
+        total: newTotal,
+        cartQuantity: state.cartQuantity - 1
+      };
+    } else {
+      addedItem.quantity -= 1;
+      let newTotal = state.total - addedItem.price;
+      return {
+        ...state,
+        total: newTotal,
+        cartQuantity: state.cartQuantity - 1
+      };
+    }
   } else {
     return state;
   }

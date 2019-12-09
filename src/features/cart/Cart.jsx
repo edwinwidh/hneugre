@@ -1,9 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { Container, Grid, Typography } from '@material-ui/core';
+import {
+  Container,
+  Grid,
+  Typography,
+  Box,
+  Divider,
+  TextField,
+  IconButton
+} from '@material-ui/core';
 import CartAppbar from './CartAppbar';
-import { removeItem } from './cartActions';
+import { removeItem, subQuantity, addQuantity } from './cartActions';
 import { Link } from 'react-router-dom';
+import { Add, Remove } from '@material-ui/icons';
 
 const mapState = (state, props) => {
   return {
@@ -15,6 +24,12 @@ const actions = dispatch => {
   return {
     removeItem: id => {
       dispatch(removeItem(id));
+    },
+    addQuantity: id => {
+      dispatch(addQuantity(id));
+    },
+    subQuantity: id => {
+      dispatch(subQuantity(id));
     }
   };
 };
@@ -24,42 +39,133 @@ class Cart extends Component {
     this.props.removeItem(id);
   };
 
+  handleAddQuantity = id => {
+    this.props.addQuantity(id);
+  };
+
+  handleSubQuantity = id => {
+    this.props.subQuantity(id);
+  };
+
   render() {
     let cart = this.props.cartList.cart.length ? (
       this.props.cartList.cart.map(item => {
         return (
-          <li key={item.id}>
-            <div className='item-img'>
-              <img src={item.photo} alt={item.photo} className='' />
-            </div>
+          <Fragment>
+            <Grid container xs>
+              <Grid item xs={8}>
+                <Typography
+                  variant='body2'
+                  style={{ padding: '10px', fontSize: '20px' }}
+                >
+                  {`${item.quantity} ${item.name}`}
+                </Typography>
+              </Grid>
 
-            <div className='item-desc'>
-              <span className='title'>{item.name}</span>
-              <p>
-                <b>Price: {item.price}$</b>
-              </p>
-              <button
-                className='waves-effect waves-light btn pink remove'
-                onClick={() => {
-                  this.handleRemove(item.id);
-                }}
-              >
-                Remove
-              </button>
-            </div>
-          </li>
+              <Grid container xs={4} justify='flex-end'>
+                <Typography
+                  variant='body2'
+                  style={{ padding: '10px', fontSize: '20px' }}
+                >
+                  {`Rp. ${item.price * item.quantity}`}
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <Grid>
+              <Grid container xs justify='flex-end'>
+                <IconButton
+                  onClick={() => {
+                    this.handleSubQuantity(item.id);
+                  }}
+                >
+                  <Remove />
+                </IconButton>
+                <IconButton
+                  onClick={() => {
+                    this.handleAddQuantity(item.id);
+                  }}
+                >
+                  <Add />
+                </IconButton>
+                <button
+                  onClick={() => {
+                    this.handleRemove(item.id);
+                  }}
+                >
+                  Remove
+                </button>
+              </Grid>
+            </Grid>
+          </Fragment>
         );
       })
     ) : (
-      <p>Nothing</p>
+      <Typography>Kosong</Typography>
     );
 
     return (
       <Container>
         <CartAppbar />
+        <Box
+          display='flex'
+          width='100%'
+          bgcolor='error.main'
+          alignItems='center'
+          px={2}
+          style={{ height: '40px' }}
+        >
+          <Grid container xs justify='center'>
+            <Typography variant='h5' style={{ color: 'white' }}>
+              Yoshinoya
+            </Typography>
+          </Grid>
+        </Box>
+        <Grid container xs justify='center' style={{ padding: '10px' }}>
+          <Typography variant='h5'>Bungkus</Typography>
+        </Grid>
+        <Divider variant='middle' />
         {cart}
-        <Grid container xs={12}>
-          <Typography>Total: {this.props.cartList.total}</Typography>
+        <Grid container xs>
+          <Grid item xs={8}>
+            <Typography
+              variant='subtitle1'
+              style={{ padding: '10px', fontSize: '20px', fontWeight: 'bold' }}
+            >
+              Total:
+            </Typography>
+          </Grid>
+
+          <Grid container xs={4} justify='flex-end'>
+            <Typography
+              variant='body1'
+              style={{ padding: '10px', fontSize: '20px', fontWeight: 'bold' }}
+            >
+              {`Rp. ${this.props.cartList.total}`}
+            </Typography>
+          </Grid>
+        </Grid>
+
+        <Grid container xs>
+          <Grid container xs={5}>
+            <Typography
+              variant='subtitle1'
+              style={{ padding: '10px', fontSize: '20px', fontWeight: 'bold' }}
+            >
+              Promo Code:
+            </Typography>
+          </Grid>
+          <Grid container xs={7}>
+            <form noValidate autoComplete='off'>
+              <div>
+                <TextField
+                  id='promocode'
+                  variant='outlined'
+                  style={{ width: '100%' }}
+                />
+              </div>
+            </form>
+          </Grid>
         </Grid>
         <br />
         <br />

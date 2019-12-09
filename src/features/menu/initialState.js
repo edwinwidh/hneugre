@@ -50,5 +50,6 @@ export default {
       photo: '/assets/yoshinoya/toridon-red-hot-chilli.png'
     }
   ],
-  total: 0
+  total: 0,
+  cartQuantity: 0
 };
