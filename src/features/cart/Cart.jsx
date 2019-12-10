@@ -110,7 +110,7 @@ class Cart extends Component {
         >
           <Grid container xs justify='center'>
             <Typography variant='h5' style={{ color: 'white' }}>
-              Yoshinoya
+              Blue Lane Coffee Kino Tower
             </Typography>
           </Grid>
         </Box>
@@ -168,7 +168,7 @@ class Cart extends Component {
             variant='contained'
             color='secondary'
             size='large'
-            style={{bottom: '70px', top: 'auto', position: 'fixed'}}
+            style={{bottom: '70px', top: 'auto', position: 'fixed', backgroundColor:'red'}}
           >
             Pesan dan Bayar
           </Button>

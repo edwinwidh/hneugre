@@ -11,6 +11,7 @@ import Cart from '../../features/cart/Cart';
 import ReceiptDashboard from '../../features/receipt/ReceiptDashboard/ReceiptDashboard';
 import BluelaneDashboard from '../../features/menu/bluelane/BluelaneDashboard';
 import BluelaneItemPage from '../../features/menu/bluelane/BluelaneItemPage/BluelaneItemPage';
+import BluelaneInfo from '../../features/menu/bluelane/BluelaneInfo';
 
 class App extends Component {
   render() {
@@ -25,8 +26,8 @@ class App extends Component {
           <Route exact path='/yoshinoya' component={YoshinoyaDashboard} />
           <Route path='/yoshinoya/:id' component={YoshinoyaItemPage} />
           <Route exact path='/bluelane' component={BluelaneDashboard} />
+          <Route exact path='/bluelaneinfo' component={BluelaneInfo} />
           <Route path='/bluelane/:id' component={BluelaneItemPage} />
-          <Route path='/adora' component={YoshinoyaDashboard} />
           <Route path='/cart' component={Cart} />
           <Route path='/receipt' component={ReceiptDashboard} />
           <BottomNav />

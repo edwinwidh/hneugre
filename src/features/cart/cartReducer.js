@@ -8,7 +8,7 @@ import {
 
 const cartReducer = (state = initialState, action) => {
   if (action.type === ADD_TO_CART) {
-    let addedItem = state.yoshitems.find(item => item.id === action.id);
+    let addedItem = state.blueitems.find(item => item.id === action.id);
     let existedItem = state.cart.find(item => action.id === item.id);
     if (existedItem) {
       addedItem.quantity += 1;
@@ -47,7 +47,7 @@ const cartReducer = (state = initialState, action) => {
   }
 
   if (action.type === ADD_QUANTITY) {
-    let addedItem = state.yoshitems.find(item => item.id === action.id);
+    let addedItem = state.blueitems.find(item => item.id === action.id);
     addedItem.quantity += 1;
     let newTotal = state.total + addedItem.price;
     return {
@@ -58,7 +58,7 @@ const cartReducer = (state = initialState, action) => {
   }
 
   if (action.type === SUB_QUANTITY) {
-    let addedItem = state.yoshitems.find(item => item.id === action.id);
+    let addedItem = state.blueitems.find(item => item.id === action.id);
     if (addedItem.quantity === 1) {
       let newItems = state.cart.filter(item => item.id !== action.id);
       let newTotal = state.total - addedItem.price;

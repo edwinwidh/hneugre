@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import BluelaneNavbar from './BluelaneNavbar';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Typography, Grid, Button } from '@material-ui/core';
 import BluelaneList from './BluelaneList';
+import BluelaneInfoHeader from './BluelaneInfoHeader';
+import { Link } from 'react-router-dom';
 
 const mapState = state => {
   return {
@@ -16,8 +18,22 @@ class BluelaneDashboard extends Component {
     return (
       <Fragment>
         <BluelaneNavbar />
+        <BluelaneInfoHeader />
+        <Grid container xs justify='center'>
+          <Button
+            component={Link}
+            to='/bluelaneinfo'
+            variant='contained'
+            color='secondary'
+            size='medium'
+            style={{ backgroundColor: 'red' }}
+          >
+            Merchant Info
+          </Button>
+        </Grid>
+        <br />
         <Box width='100%' bgcolor='error.main' px={2}>
-          <Typography variant='h6' style={{ color: 'white' }}>
+          <Typography variant='h6' style={{ color: 'white', padding: '10px' }}>
             Recommended
           </Typography>
         </Box>

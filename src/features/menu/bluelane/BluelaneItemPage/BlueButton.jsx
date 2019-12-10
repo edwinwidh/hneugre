@@ -15,7 +15,7 @@ const actions = dispatch => {
     addToCart: id => {
       dispatch(addToCart(id));
     }
-  };
+  }; 
 };
 
 class BlueButton extends Component {
@@ -32,6 +32,7 @@ class BlueButton extends Component {
         variant='contained'
         color='secondary'
         size='large'
+        style={{ backgroundColor: 'red' }}
         onClick={() => {
           this.handleClick(blueitem.id);
         }}

@@ -38,7 +38,7 @@ class ReceiptInfo extends Component {
     return (
       <Container maxWidth='xs'>
         <Typography variant='h5' style={{ padding: '10px' }}>
-          Yoshinoya Hayam Wuruk
+          Blue Lane Coffee Kino Tower
         </Typography>
         <Typography variant='p' style={{ padding: '10px' }}>
           1 January 2019, 16:35:12 | Bungkus
