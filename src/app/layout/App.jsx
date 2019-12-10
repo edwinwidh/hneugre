@@ -8,6 +8,7 @@ import AccountDashboard from '../../features/account/AccountDashboard/AccountDas
 import YoshinoyaDashboard from '../../features/menu/yoshinoya/YoshinoyaDashboard';
 import YoshinoyaItemPage from '../../features/menu/yoshinoya/YoshinoyaItemPage/YoshinoyaItemPage';
 import Cart from '../../features/cart/Cart';
+import ReceiptDashboard from '../../features/receipt/ReceiptDashboard/ReceiptDashboard';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path='/bluelane' component={YoshinoyaDashboard} />
           <Route path='/adora' component={YoshinoyaDashboard} />
           <Route path='/cart' component={Cart} />
+          <Route path='/receipt' component={ReceiptDashboard} />
           <BottomNav />
         </div>
       </Fragment>

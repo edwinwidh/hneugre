@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import YoshinoyaNavbar from "../YoshinoyaNavbar";
 import YoshinoyaItemDesc from "./YoshinoyaItemDesc";
@@ -52,8 +52,9 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
   const { miso, eggroll, redchilli } = state;
 
   return (
-    <Container>
+    <Fragment>
       <YoshinoyaNavbar />
+      <Container maxWidth='xs'>
       <YoshinoyaItemDesc yoshitem={yoshitem} />
       <br />
       <Grid container>
@@ -145,7 +146,8 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
       <br />
       <br />
       <br />
-    </Container>
+      </Container>
+    </Fragment>
   );
 };
 

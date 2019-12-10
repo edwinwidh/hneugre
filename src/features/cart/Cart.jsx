@@ -164,7 +164,7 @@ class Cart extends Component {
         <Grid container xs justify='center'>
           <Button
             component={Link}
-            to={`/yoshinoya`}
+            to={`/receipt`}
             variant='contained'
             color='secondary'
             size='large'

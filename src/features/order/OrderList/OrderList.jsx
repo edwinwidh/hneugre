@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Typography, Paper, makeStyles, Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ const OrderList = () => {
       <Typography variant='h5' color='error'>
         Active
       </Typography>
-      <Link to='/cart' style={{textDecoration: 'none'}}>
+      <Link to='/receipt' style={{textDecoration: 'none'}}>
         <Paper className={classes.root}>
           <Typography variant='h5' style={{ color: 'white' }}>
             Blue Lane Coffee Kino Tower
