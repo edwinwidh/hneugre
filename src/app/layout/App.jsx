@@ -9,6 +9,8 @@ import YoshinoyaDashboard from '../../features/menu/yoshinoya/YoshinoyaDashboard
 import YoshinoyaItemPage from '../../features/menu/yoshinoya/YoshinoyaItemPage/YoshinoyaItemPage';
 import Cart from '../../features/cart/Cart';
 import ReceiptDashboard from '../../features/receipt/ReceiptDashboard/ReceiptDashboard';
+import BluelaneDashboard from '../../features/menu/bluelane/BluelaneDashboard';
+import BluelaneItemPage from '../../features/menu/bluelane/BluelaneItemPage/BluelaneItemPage';
 
 class App extends Component {
   render() {
@@ -22,7 +24,8 @@ class App extends Component {
           <Route path='/account' component={AccountDashboard} />
           <Route exact path='/yoshinoya' component={YoshinoyaDashboard} />
           <Route path='/yoshinoya/:id' component={YoshinoyaItemPage} />
-          <Route path='/bluelane' component={YoshinoyaDashboard} />
+          <Route exact path='/bluelane' component={BluelaneDashboard} />
+          <Route path='/bluelane/:id' component={BluelaneItemPage} />
           <Route path='/adora' component={YoshinoyaDashboard} />
           <Route path='/cart' component={Cart} />
           <Route path='/receipt' component={ReceiptDashboard} />

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 import { ArrowBack } from '@material-ui/icons';
 import { withRouter } from 'react-router';
 
-class YoshinoyaNavbar extends Component {
+class BluelaneNavbar extends Component {
   render() {
     return (
       <AppBar position='sticky' color='inherit'>
@@ -19,7 +19,7 @@ class YoshinoyaNavbar extends Component {
             <ArrowBack />
           </IconButton>
           <Typography variant='h6' color='inherit'>
-            Yoshinoya
+            Blue Lane Coffee
           </Typography>
         </Toolbar>
       </AppBar>
@@ -27,4 +27,4 @@ class YoshinoyaNavbar extends Component {
   }
 }
 
-export default withRouter(YoshinoyaNavbar);
+export default withRouter(BluelaneNavbar);

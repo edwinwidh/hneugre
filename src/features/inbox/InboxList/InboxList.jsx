@@ -47,11 +47,10 @@ const InboxList = () => {
               src='/assets/logo/bluelogo.png'
             />
           </Grid>
-          <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Blue Lane Coffee</Typography>
-              <Typography variant='body1' color='textSecondary'>
+              <Typography variant='h6' style={{paddingLeft: '10px'}}>Blue Lane Coffee</Typography>
+              <Typography variant='body1' color='textSecondary' style={{paddingLeft: '10px'}}>
                 Buy 1 Get 1
               </Typography>
             </Grid>
@@ -68,11 +67,10 @@ const InboxList = () => {
               src='/assets/logo/yoshilogo.png'
             />
           </Grid>
-          <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Yoshinoya Buy 1 Get 1</Typography>
-              <Typography variant='body1' color='textSecondary'>
+              <Typography variant='h6' style={{paddingLeft: '10px'}}>Yoshinoya Buy 1 Get 1</Typography>
+              <Typography variant='body1' color='textSecondary' style={{paddingLeft: '10px'}}>
                 Yakiniku Beef Bowl
               </Typography>
             </Grid>
@@ -89,11 +87,10 @@ const InboxList = () => {
               src='/assets/logo/adoralogo.png'
             />
           </Grid>
-          <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Adoralezat 10% OFF</Typography>
-              <Typography variant='body1' color='textSecondary'>
+              <Typography variant='h6' style={{paddingLeft: '10px'}}>Adoralezat 10% OFF</Typography>
+              <Typography variant='body1' color='textSecondary' style={{paddingLeft: '10px'}}>
                 Bakmi Original S
               </Typography>
             </Grid>
@@ -110,11 +107,10 @@ const InboxList = () => {
               src='/assets/logo/adoralogo.png'
             />
           </Grid>
-          <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Adoralezat 25rb Voucher</Typography>
-              <Typography variant='body1' color='textSecondary'>
+              <Typography variant='h6' style={{paddingLeft: '10px'}}>Adoralezat 25rb Voucher</Typography>
+              <Typography variant='body1' color='textSecondary' style={{paddingLeft: '10px'}}>
                 Min. Pembelian 75rb
               </Typography>
             </Grid>
@@ -131,11 +127,10 @@ const InboxList = () => {
               src='/assets/logo/yoshilogo.png'
             />
           </Grid>
-          <Grid item xs={1}></Grid>
           <Grid item xs sm container alignContent='flex-start'>
             <Grid item xs>
-              <Typography variant='h6'>Yoshinoya Buy 1 Get 1</Typography>
-              <Typography variant='body1' color='textSecondary'>
+              <Typography variant='h6' style={{paddingLeft: '10px'}}>Yoshinoya Buy 1 Get 1</Typography>
+              <Typography variant='body1' color='textSecondary' style={{paddingLeft: '10px'}}>
                 Miso Soup
               </Typography>
             </Grid>

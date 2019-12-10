@@ -51,5 +51,55 @@ export default {
     }
   ],
   total: 0,
-  cartQuantity: 0
+  cartQuantity: 0,
+  blueitems: [
+    {
+      id: '1',
+      name: 'Bluespresso',
+      description:
+        'One sip of this will take you to a different world. You will feel the strong coffee waking you up and the sweetness of milk drowning you in bliss',
+      price: 35000,
+      photo: '/assets/bluelane/bluespresso.png'
+    },
+    {
+      id: '2',
+      name: 'Irish Coffee Latte',
+      description:
+        'One sip of this will take you to a different world. You will feel the strong coffee waking you up and the sweetness of milk drowning you in bliss',
+      price: 28000,
+      photo: '/assets/bluelane/irishcoffee.png'
+    },
+    {
+      id: '3',
+      name: 'Cookies and Cream',
+      description:
+        'One sip of this will take you to a different world. You will feel the strong coffee waking you up and the sweetness of milk drowning you in bliss',
+      price: 30000,
+      photo: '/assets/bluelane/oreo.png'
+    },
+    {
+      id: '4',
+      name: 'Java Chip',
+      description:
+        'One sip of this will take you to a different world. You will feel the strong coffee waking you up and the sweetness of milk drowning you in bliss',
+      price: 30000,
+      photo: '/assets/bluelane/javachip.png'
+    },
+    {
+      id: '5',
+      name: 'Green Tea',
+      description:
+        'One sip of this will take you to a different world. You will feel the strong coffee waking you up and the sweetness of milk drowning you in bliss',
+      price: 30000,
+      photo: '/assets/bluelane/greentea.png'
+    },
+    {
+      id: '6',
+      name: 'Irish Mocha Latte',
+      description:
+        'One sip of this will take you to a different world. You will feel the strong coffee waking you up and the sweetness of milk drowning you in bliss',
+      price: 28000,
+      photo: '/assets/bluelane/irishmocha.png'
+    }
+  ]
 };

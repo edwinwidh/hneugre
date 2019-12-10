@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import YoshinoyaNavbar from '../YoshinoyaNavbar';
-import YoshinoyaItemDesc from './YoshinoyaItemDesc';
 import {
   Container,
   Grid,
@@ -15,30 +13,32 @@ import {
   Checkbox,
   TextField
 } from '@material-ui/core';
-import YoshiButton from './YoshiButton';
+import BluelaneItemDesc from './BluelaneItemDesc';
+import BluelaneNavbar from '../BluelaneNavbar';
+import BlueButton from './BlueButton';
 
 const mapState = (state, ownProps) => {
-  const yoshitemId = ownProps.match.params.id;
+  const bluelaneId = ownProps.match.params.id;
 
-  let yoshitem = {};
+  let blueitem = {};
 
-  if (yoshitemId && state.yoshitems.length > 0) {
-    yoshitem = state.yoshitems.filter(
-      yoshitem => yoshitem.id === yoshitemId
+  if (bluelaneId && state.blueitems.length > 0) {
+    blueitem = state.blueitems.filter(
+      blueitem => blueitem.id === bluelaneId
     )[0];
   }
 
   return {
-    yoshitem
+    blueitem
   };
 };
 
-const YoshinoyaItemPage = ({ yoshitem }) => {
+const BluelaneItemPage = ({ blueitem }) => {
   const [value, setValue] = React.useState('regular');
   const [state, setState] = React.useState({
-    miso: false,
-    eggroll: false,
-    redchilli: false
+    buttercroissant: false,
+    nutellacake: false,
+    espressoshot: false
   });
 
   const handleChange = event => {
@@ -49,13 +49,13 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
     setState({ ...state, [name]: event.target.checked });
   };
 
-  const { miso, eggroll, redchilli } = state;
+  const { buttercroissant, nutellacake, espressoshot } = state;
 
   return (
     <Fragment>
-      <YoshinoyaNavbar />
+      <BluelaneNavbar />
       <Container maxWidth='xs'>
-        <YoshinoyaItemDesc yoshitem={yoshitem} />
+        <BluelaneItemDesc blueitem={blueitem} />
         <br />
         <Grid container>
           <Grid item xs={12}>
@@ -70,14 +70,14 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
                 onChange={handleChange}
               >
                 <FormControlLabel
+                  value='small'
+                  control={<Radio />}
+                  label='Small'
+                />
+                <FormControlLabel
                   value='regular'
                   control={<Radio />}
                   label='Regular'
-                />
-                <FormControlLabel
-                  value='large'
-                  control={<Radio />}
-                  label='Large'
                 />
               </RadioGroup>
             </FormControl>
@@ -91,32 +91,32 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
                 <FormControlLabel
                   control={
                     <Checkbox
-                      checked={miso}
-                      onChange={handleCheck('miso')}
-                      value='miso'
+                      checked={buttercroissant}
+                      onChange={handleCheck('buttercroissant')}
+                      value='buttercroissant'
                     />
                   }
-                  label='Miso Soup'
+                  label='Butter Croissant'
                 />
                 <FormControlLabel
                   control={
                     <Checkbox
-                      checked={eggroll}
-                      onChange={handleCheck('eggroll')}
-                      value='eggroll'
+                      checked={nutellacake}
+                      onChange={handleCheck('nutellacake')}
+                      value='nutellacake'
                     />
                   }
-                  label='Egg Roll'
+                  label='Nutella Cake'
                 />
                 <FormControlLabel
                   control={
                     <Checkbox
-                      checked={redchilli}
-                      onChange={handleCheck('redchilli')}
-                      value='redchilli'
+                      checked={espressoshot}
+                      onChange={handleCheck('espressoshot')}
+                      value='espressoshot'
                     />
                   }
-                  label='Red Chilli'
+                  label='Espresso Shot'
                 />
               </FormGroup>
             </FormControl>
@@ -141,7 +141,7 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
           </form>
         </Grid>
         <Grid container xs={12} justify='center'>
-          <YoshiButton key={yoshitem.id} yoshitem={yoshitem} />
+          <BlueButton key={blueitem.id} blueitem={blueitem} />
         </Grid>
         <br />
         <br />
@@ -151,4 +151,4 @@ const YoshinoyaItemPage = ({ yoshitem }) => {
   );
 };
 
-export default connect(mapState)(YoshinoyaItemPage);
+export default connect(mapState)(BluelaneItemPage);
