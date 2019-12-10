@@ -4,7 +4,8 @@ import {
   ButtonBase,
   Typography,
   Paper,
-  makeStyles
+  makeStyles,
+  Container
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -18,7 +19,7 @@ const useStyles = makeStyles(theme => ({
 const InboxList = () => {
   const classes = useStyles();
   return (
-    <Fragment>
+    <Container maxWidth='xs'>
       <Grid container>
         <Grid container xs={6} justify='center'>
           <ButtonBase>
@@ -141,7 +142,7 @@ const InboxList = () => {
           </Grid>
         </Grid>
       </Paper>
-    </Fragment>
+    </Container>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Typography, Paper, makeStyles } from '@material-ui/core';
+import { Typography, Paper, makeStyles, Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -18,7 +18,7 @@ const OrderList = () => {
   const classes = useStyles();
 
   return (
-    <Fragment>
+    <Container maxWidth='xs'>
       <Typography variant='h5' color='error'>
         Active
       </Typography>
@@ -49,7 +49,7 @@ const OrderList = () => {
         <Typography variant='h5'>Adora Lezat</Typography>
         <Typography variant='p'>1 January 2019, 16:35:12 | Bungkus</Typography>
       </Paper>
-    </Fragment>
+    </Container>
   );
 };
 

@@ -12,7 +12,7 @@ import { Search } from '@material-ui/icons';
 class MerchantList extends Component {
   render() {
     return (
-      <Container>
+      <Container maxWidth='xs'>
         <form noValidate autoComplete='off'>
           <TextField
             id='outlined-full-width'

@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import OrderList from '../OrderList/OrderList';
 import OrderNavbar from '../OrderNavbar';
-import { Container } from '@material-ui/core';
 
 class OrderDashboard extends Component {
   render() {
     return (
-      <Container maxWidth='xs'>
+      <Fragment>
         <OrderNavbar />
         <OrderList />
-      </Container>
+      </Fragment>
     );
   }
 }

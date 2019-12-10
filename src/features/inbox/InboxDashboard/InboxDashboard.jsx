@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import InboxList from '../InboxList/InboxList';
 import InboxNavbar from '../InboxNavbar';
 import { Container } from '@material-ui/core';
@@ -6,10 +6,10 @@ import { Container } from '@material-ui/core';
 class InboxDashboard extends Component {
   render() {
     return (
-      <Container maxWidth='xs'>
+      <Fragment>
         <InboxNavbar />
         <InboxList />
-      </Container>
+      </Fragment>
     );
   }
 }

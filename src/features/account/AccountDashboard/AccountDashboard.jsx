@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import AccountList from '../AccountList/AccountList';
 import AccountNavbar from '../AccountNavbar';
 import { Container } from '@material-ui/core';
@@ -6,10 +6,10 @@ import { Container } from '@material-ui/core';
 class AccountDashboard extends Component {
   render() {
     return (
-      <Container maxWidth='xs'>
+      <Fragment>
         <AccountNavbar />
         <AccountList />
-      </Container>
+      </Fragment>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Grid, Typography, Paper, makeStyles } from '@material-ui/core';
+import { Grid, Typography, Paper, makeStyles, Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 const AccountList = () => {
   const classes = useStyles();
   return (
-    <Fragment>
+    <Container maxWidth='xs'>
       <Grid container xs>
         <Grid item xs={6}>
           <Typography
@@ -178,7 +178,7 @@ const AccountList = () => {
       <br />
       <br />
       <br />
-    </Fragment>
+    </Container>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import MerchantList from '../MerchantList/MerchantList';
 import MerchantNavbar from '../MerchantNavbar';
 import { Container } from '@material-ui/core';
@@ -6,10 +6,10 @@ import { Container } from '@material-ui/core';
 class MerchantDashboard extends Component {
   render() {
     return (
-      <Container maxWidth='xs'>
+      <Fragment>
         <MerchantNavbar />
         <MerchantList />
-      </Container>
+      </Fragment>
     );
   }
 }

@@ -52,7 +52,7 @@ class Cart extends Component {
     let cart = this.props.cartList.cart.length ? (
       this.props.cartList.cart.map(item => {
         return (
-          <Fragment>
+          <Container maxWidth='xs'>
             <Grid container xs>
               <Grid item xs={8}>
                 <Typography
@@ -73,7 +73,6 @@ class Cart extends Component {
               </Grid>
             </Grid>
 
-            <Grid>
               <Grid container xs justify='flex-end'>
                 <IconButton
                   onClick={() => {
@@ -89,16 +88,9 @@ class Cart extends Component {
                 >
                   <Add />
                 </IconButton>
-                <button
-                  onClick={() => {
-                    this.handleRemove(item.id);
-                  }}
-                >
-                  Remove
-                </button>
+
               </Grid>
-            </Grid>
-          </Fragment>
+          </Container>
         );
       })
     ) : (
@@ -106,7 +98,7 @@ class Cart extends Component {
     );
 
     return (
-      <Container>
+      <Fragment>
         <CartAppbar />
         <Box
           display='flex'
@@ -127,6 +119,7 @@ class Cart extends Component {
         </Grid>
         <Divider variant='middle' />
         {cart}
+        <Container maxWidth='xs'>
         <Grid container xs>
           <Grid item xs={8}>
             <Typography
@@ -183,7 +176,8 @@ class Cart extends Component {
         <br />
         <br />
         <br />
-      </Container>
+        </Container>
+      </Fragment>
     );
   }
 }
