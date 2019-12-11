@@ -12,11 +12,11 @@ class MerchantListItem extends Component {
         </Grid>
         </Link>
         <br />
-        <Link to='/yoshinoya'>
+        {/* <Link to='/yoshinoya'> */}
         <Grid container xs justify='center'>
           <img style={{width: '100%'}} alt='iklan' src='/assets/yoshi.png' />
         </Grid>
-        </Link>
+        {/* </Link> */}
         <br />
         <Grid container xs justify='center'>
           <img style={{width: '100%'}} alt='iklan' src='/assets/adora.png' />

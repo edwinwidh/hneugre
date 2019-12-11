@@ -12,6 +12,7 @@ import ReceiptDashboard from '../../features/receipt/ReceiptDashboard/ReceiptDas
 import BluelaneDashboard from '../../features/menu/bluelane/BluelaneDashboard';
 import BluelaneItemPage from '../../features/menu/bluelane/BluelaneItemPage/BluelaneItemPage';
 import BluelaneInfo from '../../features/menu/bluelane/BluelaneInfo';
+import InboxMessage from '../../features/inbox/InboxList/InboxMessage';
 
 class App extends Component {
   render() {
@@ -21,7 +22,8 @@ class App extends Component {
           <Route exact path='/' component={MerchantDashboard} />
           <Route path='/merchant' component={MerchantDashboard} />
           <Route path='/pesanan' component={OrderDashboard} />
-          <Route path='/inbox' component={InboxDashboard} />
+          <Route exact path='/inbox' component={InboxDashboard} />
+          <Route path='/inbox/pesan' component={InboxMessage} />
           <Route path='/account' component={AccountDashboard} />
           <Route exact path='/yoshinoya' component={YoshinoyaDashboard} />
           <Route path='/yoshinoya/:id' component={YoshinoyaItemPage} />

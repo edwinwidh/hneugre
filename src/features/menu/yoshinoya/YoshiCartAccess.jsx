@@ -11,7 +11,7 @@ const YoshiCartAccess = ({ cartList }) => {
           top: 'auto',
           bottom: 0,
           height: '70px',
-          background: '#f44336',
+          backgroundColor: 'red',
           width: '100%'
         }}
       >

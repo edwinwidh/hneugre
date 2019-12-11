@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(2, 2),
-    background: '#f44336',
-    margin: theme.spacing(2, 2)
+    background: 'red',
+    margin: theme.spacing(2, 0)
   },
   rot: {
     padding: theme.spacing(2, 2),
-    margin: theme.spacing(2, 2)
+    margin: theme.spacing(2, 0)
   }
 }));
 

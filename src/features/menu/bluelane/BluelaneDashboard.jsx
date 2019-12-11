@@ -32,7 +32,7 @@ class BluelaneDashboard extends Component {
           </Button>
         </Grid>
         <br />
-        <Box width='100%' bgcolor='error.main' px={2}>
+        <Box width='100%' px={2} style={{backgroundColor: 'red'}}>
           <Typography variant='h6' style={{ color: 'white', padding: '10px' }}>
             Recommended
           </Typography>
